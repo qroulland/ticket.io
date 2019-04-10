@@ -16,6 +16,7 @@ form {
     background-image: linear-gradient(to left bottom, #ff7058, #ff8852, #ffa050, #ffb753, #ffce5c);
     position: absolute;
     z-index: -1;
-    transform: rotate(25deg);
-    top: -10%;
+    transform: rotate(15deg);
+    top: -50%;
+    left: -50%;
 }
