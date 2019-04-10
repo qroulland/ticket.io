@@ -10,10 +10,31 @@ if ( isset($_POST['login']) || isset($_POST['password']) ) {
 
 <html>
 <head>
-    <?php include('injection.php');?>
+    <?php include('include.php');?>
 </head>
 
 <body>
+<?php
+if(!empty($_GET['do'])) {
+    if ($_GET['do'] == "connect") {
+        if (empty($_POST['login']) || empty($_POST['password'])) {
+            echo 'Identifiants incorrects';
+        } else {
+            $q = $bdd->prepare('SELECT * FROM utilisateur WHERE util_login = :login AND util_password = :password');
+            $q->execute(array('login' => $_POST['login'], 'password' => $_POST['password']));
+
+            $result = $q->fetchAll();
+            
+            if (count($result) == 0) {
+                echo "erreur";
+            } else {
+                echo "réussi";
+            }
+        }      
+    }
+}
+
+?>
     <div class="background-rotate"></div>
 
     <?php if($error === true){ ?>
