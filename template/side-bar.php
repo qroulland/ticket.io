@@ -15,43 +15,31 @@
         </form>
     </div>
 
-    <form action="">
+    <form action="?do=update" method="post">
         <p>PROJECT</p>
+        <?php 
+        for ($p=0; $p<count($projects); $p++) { ?>
         <div class="form-group">
             <input type="checkbox">
-            <label>Kanban</label>
+            <label><?=$projects[$p]['pro_nom'];?></label>
         </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Showcase</label>
-        </div>
+        <?php } ?>
         <p>TYPE</p>
+        <?php 
+        for ($t=0; $t<count($types); $t++) { ?>
         <div class="form-group">
             <input type="checkbox">
-            <label>Bug<i class="fas fa-bug text-danger ml-2"></i></label>
+            <label><?=$types[$t]['typ_nom'];?><i class="<?=$types[$t]['typ_icone']?> ml-2"></i></label>
         </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Chore<i class="fas fa-wrench text-info ml-2"></i></label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Feature<i class="fas fa-star text-warning ml-2"></i></label>
-        </div>
+        <?php } ?>
         <p>URGENCY</p>
+        <?php 
+        for ($u=0; $u<count($urgencies); $u++) { ?>
         <div class="form-group">
             <input type="checkbox">
-            <label>Low</label>
+            <label><?=$urgencies[$u]['urgent_type'];?></label>
         </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Meduim</label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Hight</label>
-        </div>
-
-        <button class="btn btn-success btn-sm w-100">Apply</button>
+        <?php } ?>
+        <button type="submit" class="btn btn-success btn-sm w-100">Apply</button>
     </form>
 </div>
