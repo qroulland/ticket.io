@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 session_destroy();
-echo 'Déconnecté';
+header('location: /ticket.io');
