@@ -1,6 +1,8 @@
 <nav class="navbar">
     <span class="navbar-brand">
-        <img src="assets/img/Ticket.png" width="60">
+        <a href="/ticket.io">
+            <img src="assets/img/Ticket.png" width="60">
+        </a>
     </span>
 
     <div class="d-flex justify-content-center align-items-center right-menu">
@@ -13,7 +15,7 @@
                 <?php echo $_SESSION['login']; ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Profil</a>
+                <a class="dropdown-item" href="profil.php">Profil</a>
                 <a class="dropdown-item" href="deconnexion.php">Se déconnecter</a>
             </div>
         </div>

@@ -1,21 +1,13 @@
-<?php include('template/header.php');include('template/navbar.php');?>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cardModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
 <div class="modal fade" id="cardModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ticket title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ticket</h5>
       </div>
 
       <div class="modal-body">
         
-        <?php include('template/form.php'); ?>
+        <?php include('template/formTicket.php'); ?>
 
       </div>
 
@@ -26,5 +18,3 @@
     </div>
   </div>
 </div>
-
-<?php include('template/footer.php'); ?>

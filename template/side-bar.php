@@ -10,48 +10,11 @@
                 </div>
             </div>
         </form>
-        <form action="">
-            <button class="btn btn-success btn-sm w-100 mb-2">Create a ticket</button>
-        </form>
+        <button class="btn btn-success btn-sm w-100 mb-2" data-toggle="modal" data-target="#cardModal">Create a ticket</button>
     </div>
 
-    <form action="">
-        <p>PROJECT</p>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Kanban</label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Showcase</label>
-        </div>
-        <p>TYPE</p>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Bug<i class="fas fa-bug text-danger ml-2"></i></label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Chore<i class="fas fa-wrench text-info ml-2"></i></label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Feature<i class="fas fa-star text-warning ml-2"></i></label>
-        </div>
-        <p>URGENCY</p>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Low</label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Meduim</label>
-        </div>
-        <div class="form-group">
-            <input type="checkbox">
-            <label>Hight</label>
-        </div>
+    <?php include('template/modal.php'); ?>
 
-        <button class="btn btn-success btn-sm w-100">Apply</button>
-    </form>
+    <?php include('template/formFilter.php'); ?>
+    
 </div>
