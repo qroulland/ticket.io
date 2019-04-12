@@ -12,6 +12,7 @@
     <select class="form-control" id="ticket_project">
       <option>Kanban</option>
       <option>Showcase</option>
+      <option>Aucun</option>
     </select>
   </div>
   <div class="form-group">

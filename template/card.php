@@ -1,4 +1,4 @@
-<div class="card card-red">
+<div class="card card-red" data-toggle="modal" data-target="#cardModal">
     <strong>Title</strong>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam qui placeat necessitatib</p>
     <div class="d-flex">

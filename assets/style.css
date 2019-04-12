@@ -133,3 +133,13 @@ strong {
 .form-control.form-control-sm {
     font-size: 12px!important;
 }
+
+.profil-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.nombreStats {
+    font-size: 52px;
+    font-weight: 600;
+}
