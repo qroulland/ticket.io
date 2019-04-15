@@ -1,14 +1,28 @@
-<div class="card card-red" data-toggle="modal" data-target="#cardModal">
-    <strong>Title</strong>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam qui placeat necessitatib</p>
+<div class="card <?php echo cardColor(getUrgency($tickets[$key][$p]['tic_urgence']))?>">
+    <strong><?php echo $tickets[$key][$p]['tic_titre'] ?></strong>
+    <p><?php echo $tickets[$key][$p]['tic_description'] ?></p>
     <div class="d-flex">
         <span class="mini-label d-flex justify-content-center align-items-center">
-            <i class="fas fa-star text-warning "></i>
+            <i class="<?php echo getTicketType($tickets[$key][$p]['tic_type']);?>"></i>
         </span>
-        <span class="mini-label">
-            <i class="fas fa-project-diagram text-secondary mr-1"></i>
-            Kaban
-        </span>
+        <?php if($tickets[$key][$p]['tic_projet'] != NULL){ ?>
+            <span class="mini-label">
+                <i class="fas fa-project-diagram text-secondary mr-1"></i>
+                <?php echo getProject($tickets[$key][$p]['tic_projet']); ?>
+            </span>
+        <?php } ?>
+        <?php if($value === "Todo"){ ?>
+        <form action="?do=start_intervention/<?php echo $tickets[$key][$p]['tic_num'];?>" method="POST" style="margin: 0px" class="ml-auto">
+            <button type="submit" class="btn btn-secondary btn-sm" name="submit">Intervenir</button>
+        </form>
+        <?php } elseif($value === "In progress") { ?>
+        <form action="?do=end_intervention/<?php echo $tickets[$key][$p]['tic_num'];?>" method="POST" style="margin: 0px" class="ml-auto">
+            <button type="submit" class="btn btn-secondary btn-sm" name="submit">Terminer</button>
+        </form>
+        <?php } elseif($value === "Done") { ?>
+        <form action="?do=close_ticket/<?php echo $tickets[$key][$p]['tic_num'];?>" method="POST" style="margin: 0px" class="ml-auto">
+            <button type="submit" class="btn btn-secondary btn-sm" name="submit">Cloturer</button>
+        </form>
+        <?php } ?>
     </div>
-    
 </div>

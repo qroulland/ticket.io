@@ -2,10 +2,10 @@
     
 <head>
     <?php 
-        include('include/injectionBootstrap.php');
-        include('include/injectionStyle.php');
-        include('include/injectionFontAwesome.php');
-        include('include/injectionPolicies.php');
+        include('Inc/injectionBootstrap.php');
+        include('Inc/injectionStyle.php');
+        include('Inc/injectionFontAwesome.php');
+        include('Inc/injectionPolicies.php');
     ?>
 </head>
 

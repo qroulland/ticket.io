@@ -20,7 +20,7 @@
         for ($u=0; $u<count($urgencies); $u++) { ?>
         <div class="form-group">
             <input type="checkbox">
-            <label><?=$urgencies[$u]['urgent_type'];?></label>
+            <label><?=$urgencies[$u]['urg_type'];?></label>
         </div>
         <?php } ?>
         <button type="submit" class="btn btn-success btn-sm w-100">Apply</button>

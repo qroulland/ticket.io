@@ -6,12 +6,12 @@ if(!isset($_SESSION['login'])) {
     header('location: /ticket.io');
 }
 
-include('template/header.php');
+include('Template/header.php');
 
-include('template/navbar.php');
+include('Template/navbar.php');
 
-include('template/profil.php');
+include('Template/profil.php');
 
-include('template/footer.php'); 
+include('Template/footer.php'); 
 
 ?>
