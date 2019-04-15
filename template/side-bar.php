@@ -1,6 +1,7 @@
 <div class="side-bar">
 
     <div class="mb-4" style="border-bottom: 1px solid #b9b9b9">
+        <?php if(getRole($_SESSION['login']) == 3) { ?>
         <label>NEW PROJECT</label>
         <form action="?do=createProject" method="POST">
             <div class="input-group">
@@ -10,6 +11,8 @@
                 </div>
             </div>
         </form>
+        <?php } ?>
+        
         <button class="btn btn-success btn-sm w-100 mb-2" data-toggle="modal" data-target="#cardModal">Create a ticket</button>
     </div>
 

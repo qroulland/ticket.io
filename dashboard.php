@@ -8,6 +8,7 @@ require_once('Inc/function/project.php');
 require_once('Inc/function/ticket.php');
 require_once('Inc/function/type.php');
 require_once('Inc/function/urgency.php');
+require_once('Inc/function/user.php');
 
 session_start();
 

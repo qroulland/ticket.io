@@ -3,7 +3,6 @@
         <i class="fas fa-user fa-5x text-light"></i>
     </div>
     <h1 class="text-uppercase"><?php echo $_SESSION['login']; ?></h1>
-    <p>admin@ticketio.com</p>
 
     <div class="d-flex row mt-5">
         <div class="col">

@@ -36,13 +36,13 @@ function cardColor($urgency){
     }
 }
 
-function getTicketType($id){
+function getIntervenant($id){
     include('Config/db.php');
-    $q = $bdd->query('SELECT typ_icone FROM type_ticket WHERE typ_num ='.$id);
+    $q = $bdd->query('SELECT tic_intervenant FROM ticket WHERE tic_num ='.$id);
 
     $result  = $q->fetch();
 
-    return $result['typ_icone'];
+    return $result['tic_intervenant'];
 }
 
 function fetchTicketsTodo(){
