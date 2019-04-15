@@ -16,6 +16,9 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="profil.php">Profil</a>
+                <?php if(getRole($_SESSION['login']) == 3) { ?>
+                <a class="dropdown-item" href="users.php">Gestion des utilisateurs</a>
+                <?php } ?>
                 <a class="dropdown-item" href="deconnexion.php">Se déconnecter</a>
             </div>
         </div>

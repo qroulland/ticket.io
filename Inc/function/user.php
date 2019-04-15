@@ -8,3 +8,14 @@ function getRole($login){
 
     return $result['util_rol_num'];
 }
+
+function getUsers(){
+    include('Config/db.php');
+    $q = $bdd->query("SELECT * FROM utilisateur");
+
+    $result  = $q->fetchAll();
+
+    return $result;
+}
+
+$users = getUsers();
