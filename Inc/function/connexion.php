@@ -5,7 +5,7 @@ $q->execute(array('login' => $_POST['login'], 'password' => $_POST['password']))
 
 $result = $q->fetch();
 
-if (count($result) == 0) {
+if ($result === false) {
     $error = true;
 } else {
     session_start();
