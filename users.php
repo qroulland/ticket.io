@@ -4,7 +4,7 @@ session_start();
 
 include('Inc/function/user.php');
 
-if(!isset($_SESSION['login'])) {
+if(!isset($_SESSION['login']) || $_SESSION['loginRole'] != 3) {
     header('location: /ticket.io');
 }
 

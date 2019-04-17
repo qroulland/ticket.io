@@ -24,7 +24,9 @@
                 <td><?php echo getRoleLibelle($user['util_rol_num'])?></td>
                 <td class="d-flex">
                     <a data-toggle="modal" data-target="#userModal" class="rounded-circle bg-warning icon fas fa-edit text-light d-flex justify-content-center align-items-center mx-2"></a>
+                    <?php if($user['util_rol_num'] != 3){ ?>
                     <a href="?do=removeUser/<?php echo $user['util_num']?>" class="rounded-circle bg-danger icon fas fa-trash text-light d-flex justify-content-center align-items-center mx-2"></a>
+                    <?php } ?>
                 </td>
             </tr>
             <?php } ?>

@@ -62,3 +62,12 @@ function createUser(){
 
     header('Location: users.php');
 }
+
+function getCountProject($id){
+    include('Config/db.php');
+    $q = $bdd->query("SELECT count(tic_projet) FROM ticket WHERE tic_demandeur=".$id." OR tic_intervenant=".$id);
+
+    $result  = $q->fetch();
+}
+
+getCountProject(3);
