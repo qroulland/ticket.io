@@ -16,13 +16,15 @@
             <button type="submit" class="btn btn-secondary btn-sm" name="submit">Intervenir</button>
         </form>
         <?php } elseif($value === "In progress" && getIntervenant($tickets[$key][$p]['tic_num']) === $_SESSION['loginId']) { ?>
-        <form action="?do=end_intervention/<?php echo $tickets[$key][$p]['tic_num'];?>" method="POST" style="margin: 0px" class="ml-auto">
-            <button type="submit" class="btn btn-secondary btn-sm" name="submit">Terminer</button>
-        </form>
+        <span class="ml-auto">
+            <a href="?do=return_to_TD/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-danger btn-sm mr-1"> < </a>
+            <a href="?do=end_intervention/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-secondary btn-sm">Terminer</a>
+        </span>
         <?php } elseif($value === "Done" && getRole($_SESSION['login']) == 3) { ?>
-        <form action="?do=close_ticket/<?php echo $tickets[$key][$p]['tic_num'];?>" method="POST" style="margin: 0px" class="ml-auto">
-            <button type="submit" class="btn btn-secondary btn-sm" name="submit">Cloturer</button>
-        </form>
+            <span class="ml-auto">
+                <a href="?do=return_to_SI/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-danger btn-sm mr-1"> < </a>
+                <a href="?do=close_ticket/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-secondary btn-sm" >Cloturer</a>
+            </span>
         <?php } ?>
     </div>
 </div>

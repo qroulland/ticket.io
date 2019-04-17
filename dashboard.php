@@ -37,6 +37,10 @@ if (!empty($_GET['do'])) {
         end_intervention($parse[1]);
     } elseif ($parse[0] == "close_ticket"){
         close_ticket($parse[1]);
+    } elseif ($parse[0] == "return_to_SI"){
+        return_to_SI($parse[1]);
+    } elseif ($parse[0] == "return_to_TD"){
+        return_to_TD($parse[1]);
     }
 }
 
