@@ -8,8 +8,6 @@ if(!isset($_SESSION['login'])) {
     header('location: /ticket.io');
 }
 
-
-
 include('Template/header.php');
 
 include('Template/navbar.php');

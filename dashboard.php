@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 $tickets= [];
 $col = ["Todo","In progress", "Done", "Close"];
 
@@ -9,8 +11,6 @@ require_once('Inc/function/ticket.php');
 require_once('Inc/function/type.php');
 require_once('Inc/function/urgency.php');
 require_once('Inc/function/user.php');
-
-session_start();
 
 if(!isset($_SESSION['login'])) {
     header('location: /ticket.io');
