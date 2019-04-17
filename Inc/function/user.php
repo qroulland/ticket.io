@@ -136,4 +136,9 @@ if($_SESSION['loginRole'] == 1){
     $NumberTicketsIntervention = getNumberTicketIntervention($_SESSION['loginId']);
     $NumberProjects = getCountProject($_SESSION['loginId']);
     $TimeIntervention = ConvertToHoursMins(getTimeIntervention($_SESSION['loginId']));
+
+    if(strlen(strval($TimeIntervention[1])) === 1){
+        $TimeIntervention[1] = "0".strval($TimeIntervention[1]);
+    }
+
 }

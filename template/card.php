@@ -18,7 +18,7 @@
         <?php } elseif($value === "In progress" && getIntervenant($tickets[$key][$p]['tic_num']) === $_SESSION['loginId']) { ?>
         <span class="ml-auto">
             <a href="?do=return_to_TD/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-danger btn-sm mr-1"> < </a>
-            <a href="?do=end_intervention/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-secondary btn-sm">Terminer</a>
+            <a data-toggle="modal" data-target="#endModal<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-secondary text-white btn-sm">Terminer</a>
         </span>
         <?php } elseif($value === "Done" && getRole($_SESSION['login']) == 3) { ?>
             <span class="ml-auto">
@@ -27,4 +27,28 @@
             </span>
         <?php } ?>
     </div>
+</div>
+
+<div class="modal fade" id="endModal<?php echo $tickets[$key][$p]['tic_num'];?>" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ticket</h5>
+      </div>
+
+      <div class="modal-body">
+        
+        <form action="?do=end_intervention/<?php echo $tickets[$key][$p]['tic_num'];?>" method="POST">
+          <div class="form-group">
+            <label for="ticket_title">Description d'intervention</label>
+            <textarea class="form-control" id="ticket_description_intervention" name="ticket_description_intervention" required></textarea>
+          </div>
+          
+          <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary btn-sm">Save</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
 </div>
