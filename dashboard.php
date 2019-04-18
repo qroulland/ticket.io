@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 $tickets= [];
 $col = ["Todo","In progress", "Done", "Close"];
 
@@ -9,8 +11,6 @@ require_once('Inc/function/ticket.php');
 require_once('Inc/function/type.php');
 require_once('Inc/function/urgency.php');
 require_once('Inc/function/user.php');
-
-session_start();
 
 if(!isset($_SESSION['login'])) {
     header('location: /ticket.io');
@@ -37,6 +37,10 @@ if (!empty($_GET['do'])) {
         end_intervention($parse[1]);
     } elseif ($parse[0] == "close_ticket"){
         close_ticket($parse[1]);
+    } elseif ($parse[0] == "return_to_SI"){
+        return_to_SI($parse[1]);
+    } elseif ($parse[0] == "return_to_TD"){
+        return_to_TD($parse[1]);
     }
 }
 

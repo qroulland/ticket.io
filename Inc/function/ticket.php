@@ -172,11 +172,23 @@ function start_intervention($id){
     header('Location: dashboard.php');
 }
 
+function return_to_TD($id){
+    include('Config/db.php');
+    $q = $bdd->prepare('UPDATE ticket SET tic_intervenant =:intervenant, tic_date_prise_en_charge =:date WHERE tic_num='.$id);
+    $q->execute(array(
+        'intervenant' => NULL,
+        'date' => NULL
+    ));
+
+    header('Location: dashboard.php');
+}
+
 function end_intervention($id){
     include('Config/db.php');
-    $q = $bdd->prepare('UPDATE ticket SET tic_date_fin_intervention =:date WHERE tic_num='.$id);
+    $q = $bdd->prepare('UPDATE ticket SET tic_date_fin_intervention =:date, tic_description_intervention =:description WHERE tic_num='.$id);
     $q->execute(array(
-        'date' => date('Y-m-d H:i:s')
+        'date' => date('Y-m-d H:i:s'),
+        'description' => $_POST['ticket_description_intervention']
     ));
 
     header('Location: dashboard.php');
@@ -187,6 +199,17 @@ function close_ticket($id){
     $q = $bdd->prepare('UPDATE ticket SET tic_date_cloture =:date WHERE tic_num='.$id);
     $q->execute(array(
         'date' => date('Y-m-d H:i:s')
+    ));
+
+    header('Location: dashboard.php');
+}
+
+function return_to_SI($id){
+    include('Config/db.php');
+    $q = $bdd->prepare('UPDATE ticket SET tic_date_fin_intervention =:date, tic_description_interventin =:description WHERE tic_num='.$id);
+    $q->execute(array(
+        'date' => NULL,
+        'description' => NULL
     ));
 
     header('Location: dashboard.php');

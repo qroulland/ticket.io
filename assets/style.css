@@ -70,7 +70,7 @@ strong {
 
 .card {
     margin: 10px 0px;
-    padding: 10px;
+    padding: 10px 5px;
     text-align: left;
 }
 
@@ -122,11 +122,11 @@ strong {
 
 .mini-label {
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     width: auto;
     font-size: 12px;
     background-color: white;
-    margin: 0px 10px 0px 0px;
+    margin: 0px 5px 0px 0px;
 }
 
 .btn-sm,
