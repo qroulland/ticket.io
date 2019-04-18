@@ -1,8 +1,8 @@
 <?php
-$servername = "remotemysql.com";
-$table = "HYiH2Cm7zL";
-$username = "HYiH2Cm7zL";
-$password = "YBZuqVVDIh";
+$servername = "localhost";
+$table = "gest-tickets";
+$username = "root";
+$password = "";
 
 try {
     $bdd = new PDO("mysql:host=$servername;dbname=$table", $username, $password);

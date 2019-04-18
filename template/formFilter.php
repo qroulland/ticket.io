@@ -1,9 +1,9 @@
-<form action="?do=update" method="post">
+<form action="?do=filter" method="post">
         <p>PROJECT</p>
         <?php 
         for ($p=0; $p<count($projects); $p++) { ?>
         <div class="form-group">
-            <input id="<?php echo $projects[$p]['pro_nom'];?>" type="checkbox">
+            <input id="<?php echo $projects[$p]['pro_nom'];?>" name="projet_<?=$projects[$p]['pro_num']?>" type="checkbox">
             <label for="<?php echo $projects[$p]['pro_nom'];?>"><?=$projects[$p]['pro_nom'];?></label>
         </div>
         <?php } ?>
@@ -11,7 +11,7 @@
         <?php 
         for ($t=0; $t<count($types); $t++) { ?>
         <div class="form-group">
-            <input id="<?php echo $types[$t]['typ_icone']?>" type="checkbox">
+            <input id="<?php echo $types[$t]['typ_icone']?>" name="type_<?=$types[$t]['typ_num']?>" type="checkbox">
             <label for="<?php echo $types[$t]['typ_icone']?>"><?=$types[$t]['typ_nom'];?><i class="<?=$types[$t]['typ_icone']?> ml-2"></i></label>
         </div>
         <?php } ?>
@@ -19,7 +19,7 @@
         <?php 
         for ($u=0; $u<count($urgencies); $u++) { ?>
         <div class="form-group">
-            <input id="<?php echo $urgencies[$u]['urg_type'];?>" type="checkbox">
+            <input id="<?php echo $urgencies[$u]['urg_type'];?>" name="urgence_<?=$urgencies[$u]['urg_num']?>" type="checkbox">
             <label for="<?php echo $urgencies[$u]['urg_type'];?>"><?=$urgencies[$u]['urg_type'];?></label>
         </div>
         <?php } ?>
