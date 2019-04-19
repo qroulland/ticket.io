@@ -1,5 +1,5 @@
 <div class="card <?php echo cardColor(getUrgency($tickets[$key][$p]['tic_urgence']))?>">
-    <strong><?php echo $tickets[$key][$p]['tic_titre'] ?></strong>
+    <strong data-toggle="modal" data-target="#editModal<?php echo $tickets[$key][$p]['tic_num']?>"><a href="#"><?php echo $tickets[$key][$p]['tic_titre'] ?></a></strong>
     <p><?php echo $tickets[$key][$p]['tic_description'] ?></p>
     <div class="d-flex">
         <span class="mini-label d-flex justify-content-center align-items-center">
@@ -18,7 +18,7 @@
         <?php } elseif($value === "In progress" && getIntervenant($tickets[$key][$p]['tic_num']) === $_SESSION['loginId']) { ?>
         <span class="ml-auto">
             <a href="?do=return_to_TD/<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-danger btn-sm mr-1"> < </a>
-            <a data-toggle="modal" data-target="#endModal<?php echo $tickets[$key][$p]['tic_num'];?>" class="btn btn-secondary text-white btn-sm">Terminer</a>
+            <a data-toggle="modal" data-target="#endModal<?php echo $tickets[$key][$p]['tic_num']?>" class="btn btn-secondary text-white btn-sm">Terminer</a>
         </span>
         <?php } elseif($value === "Done" && getRole($_SESSION['login']) == 3) { ?>
             <span class="ml-auto">
@@ -29,7 +29,9 @@
     </div>
 </div>
 
-<div class="modal fade" id="endModal<?php echo $tickets[$key][$p]['tic_num'];?>" tabindex="-1">
+<?php include('Template/ModalEdit.php')?>
+
+<div class="modal fade" id="endModal<?php echo $tickets[$key][$p]['tic_num']?>" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

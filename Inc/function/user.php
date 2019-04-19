@@ -39,6 +39,15 @@ function getUsers(){
 
 $users = getUsers();
 
+function getUser($id){
+    include('Config/db.php');
+    $q = $bdd->query("SELECT util_login FROM utilisateur WHERE util_num =".$id);
+
+    $result  = $q->fetch();
+
+    return $result['util_login'];
+}
+
 function removeUser($id){
     include('Config/db.php');
     $q = $bdd->query("DELETE FROM utilisateur WHERE util_num=".$id);

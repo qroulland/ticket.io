@@ -30,9 +30,9 @@ function fetchTicket($id){
 }
 
 function cardColor($urgency){
-    if($urgency == 'faible'){
+    if($urgency == 'low'){
         return "card-green";
-    } elseif($urgency == 'moyenne'){
+    } elseif($urgency == 'medium'){
         return "card-yellow";
     } else {
         return "card-red";
@@ -206,7 +206,7 @@ function close_ticket($id){
 
 function return_to_SI($id){
     include('Config/db.php');
-    $q = $bdd->prepare('UPDATE ticket SET tic_date_fin_intervention =:date, tic_description_interventin =:description WHERE tic_num='.$id);
+    $q = $bdd->prepare('UPDATE ticket SET tic_date_fin_intervention =:date, tic_description_intervention =:description WHERE tic_num='.$id);
     $q->execute(array(
         'date' => NULL,
         'description' => NULL

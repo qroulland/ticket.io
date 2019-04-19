@@ -79,7 +79,7 @@ strong {
     background-color: rgba(255, 112, 88, 0.4);
 }
 
-.card.card-red strong{
+.card.card-red strong a{
     color: #990A00;
 }
 
@@ -87,7 +87,7 @@ strong {
     border-left: 5px solid #ffce5c;
     background-color: rgba(255, 206, 92, 0.4);
 }
-.card.card-yellow strong{
+.card.card-yellow strong a{
     color: #996800;
 }
 
@@ -96,7 +96,7 @@ strong {
     background-color: rgba(168, 235, 18, 0.4);
 }
 
-.card.card-green strong{
+.card.card-green strong a{
     color: #428500;
 }
 

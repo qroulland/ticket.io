@@ -2,7 +2,7 @@
 $servername = "localhost";
 $table = "gest-tickets";
 $username = "root";
-$password = "";
+$password = "root";
 
 try {
     $bdd = new PDO("mysql:host=$servername;dbname=$table", $username, $password);
