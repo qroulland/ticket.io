@@ -1,5 +1,5 @@
 # TICKET.io
-Kanban board project in PHP inheritance during my 3rd year of studies.
+Kanban board project in PHP legacy during my 3rd year of studies.
 
 ## Features
 * Create projects
