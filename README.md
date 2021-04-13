@@ -13,7 +13,6 @@ Kanban board project in PHP legacy during my 3rd year of studies.
 
 ```php
 $servername = "localhost";
-$table = "gest-tickets";
 $username = "root";
 $password = "root";
 ```
