@@ -1,0 +1,145 @@
+body{
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+p,
+label,
+span {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.navbar {
+    background-image: linear-gradient(to left, #ff7058, #ff8852, #ffa050, #ffb753, #ffce5c);
+    padding: .5rem 0;
+    height: 10%;
+}
+
+.navbar-brand {
+    width: 15%;
+    text-align: center;
+    border-right: 1px solid #f5f5f5;
+}
+
+.navbar-brand img {
+    padding-right: 10px;
+    transition: .4s filter;
+}
+
+.right-menu {
+    margin-right: 100px;
+}
+
+.form-login {
+    background-color: #f5f5f5;
+    padding: 15px 25px 15px 25px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.50);
+}
+
+.background-rotate {
+    width: 200%;
+    height: 100%;
+    background-image: linear-gradient(to left bottom, #ff7058, #ff8852, #ffa050, #ffb753, #ffce5c);
+    position: absolute;
+    z-index: -1;
+    transform: rotate(15deg);
+    top: -50%;
+    left: -50%;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.card {
+    margin: 10px 0px;
+    padding: 10px 5px;
+    text-align: left;
+}
+
+.card.card-red {
+    border-left: 5px solid #ff7058;
+    background-color: rgba(255, 112, 88, 0.4);
+}
+
+.card.card-red strong a{
+    color: #990A00;
+}
+
+.card.card-yellow {
+    border-left: 5px solid #ffce5c;
+    background-color: rgba(255, 206, 92, 0.4);
+}
+.card.card-yellow strong a{
+    color: #996800;
+}
+
+.card.card-green {
+    border-left: 5px solid #A8EB12;
+    background-color: rgba(168, 235, 18, 0.4);
+}
+
+.card.card-green strong a{
+    color: #428500;
+}
+
+.side-bar {
+    width: 15%;
+    min-height: 90%;
+    background-color: #f5f5f5;
+    padding: 25px;
+}
+
+.board {
+    padding: 25px 0px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.col h4 {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+.mini-label {
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: auto;
+    font-size: 12px;
+    background-color: white;
+    margin: 0px 5px 0px 0px;
+}
+
+.btn-sm,
+.form-control.form-control-sm {
+    font-size: 12px!important;
+}
+
+.profil-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.nombreStats {
+    font-size: 52px;
+    font-weight: 600;
+}
