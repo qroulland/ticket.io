@@ -9,7 +9,7 @@ Kanban board project in PHP legacy during my 3rd year of studies.
 * Manage users
 
 ## Get started
-*Change var in config/db.php file
+* Change var in config/db.php file
 
 ```php
 $servername = "localhost";
@@ -17,5 +17,5 @@ $table = "gest-tickets";
 $username = "root";
 $password = "root";
 ```
-*Use config/database.sql to create the database
-*Connect to the application with the default admin account (id: root - password: root)
+* Use config/database.sql to create the database
+* Connect to the application with the default admin account (id: root - password: root)
